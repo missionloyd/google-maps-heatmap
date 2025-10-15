@@ -21,10 +21,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Inject API Key
-        env:
-          GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
         run: |
-          sed -i "s|GOOGLE_MAPS_API_KEY|${GOOGLE_MAPS_API_KEY}|g" app/index.html
+          echo "Original:"
+          grep "key=" app/index.html
+          sed -i 's/GOOGLE_MAPS_API_KEY/${{ secrets.GOOGLE_MAPS_API_KEY }}/g' app/index.html
+          echo "After:"
+          grep "key=" app/index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
