@@ -1,6 +1,6 @@
 # GIST 5300 - Homework 6: Google Heat Maps
 
-**Live Demo:** https://missionloyd.github.io/google-maps-heatmap/
+**Live Demo:** https://missionloyd.github.io/google-maps-heatmap/app/
 
 This project demonstrates Google Maps Heat Map visualization using two distinct datasets showing interesting regional clustering patterns across the United States.
 
