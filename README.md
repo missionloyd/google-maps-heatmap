@@ -101,7 +101,7 @@ Choose either the Docker setup (recommended) or manual local server setup.
 Open `app/index.html` and replace:
 ```html
 <!-- Line 27 - Replace with your API key -->
-src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&loading=async&libraries=visualization&callback=initMap"
+src="https://maps.googleapis.com/maps/api/js?key=GOOGLE_MAPS_API_KEY&loading=async&libraries=visualization&callback=initMap"
 ```
 
 ### Step 3: Run Local Web Server (Manual Setup Only)
@@ -147,7 +147,7 @@ The Docker setup automatically injects your Google Maps API key from the `.env.l
 1. You set `GOOGLE_MAPS_API_KEY` in `.env.local`
 2. Docker Compose passes it as an environment variable to the container
 3. The `entrypoint.sh` script runs at container startup
-4. It replaces `YOUR_API_KEY` in `index.html` with your actual API key
+4. It replaces `GOOGLE_MAPS_API_KEY` in `index.html` with your actual API key
 5. Nginx serves the updated HTML with your credentials
 
 This means you don't need to manually edit the HTML file - just configure `.env.local` and run!
@@ -204,9 +204,9 @@ This project includes automatic deployment to GitHub Pages using GitHub Actions.
 4. **Deploy**
    - Push to `main` branch or trigger workflow manually
    - GitHub Actions will automatically:
-     - Inject your API key from secrets
+     - Inject your API key from secrets into the HTML
      - Build and deploy to GitHub Pages
-   - Your site will be live at: `https://yourusername.github.io/google-maps-heatmap/`
+   - Your site will be live at: `https://yourusername.github.io/google-maps-heatmap/app/`
 
 ### GitHub Actions Workflow
 
