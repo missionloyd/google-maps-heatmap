@@ -189,9 +189,10 @@ This project includes automatic deployment to GitHub Pages using GitHub Actions.
    - Create a new repository named `google-maps-heatmap`
    - Push your code to the repository
 
-2. **Add GitHub Secret**
-   - Go to repository Settings → Secrets and variables → Actions
-   - Click "New repository secret"
+2. **Add GitHub Secret to Environment**
+   - Go to repository Settings → Environments
+   - Click on `github-pages` environment (create if it doesn't exist)
+   - Under "Environment secrets", click "Add secret"
    - Name: `GOOGLE_MAPS_API_KEY`
    - Value: Your Google Maps API key
    - Click "Add secret"
