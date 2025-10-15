@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>USA Heat Maps - Tesla Charging Stations & Rest Areas</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+  </head>
+  <body>
+    <div id="floating-panel">
+      <button id="toggle-heatmap">Toggle Tesla Charging Stations</button>
+      <button id="toggle-heatmap2">Toggle Rest Areas</button>
+    </div>
+    <div id="map"></div>
+
+    <!-- Data files -->
+    <script src="./teslaStations.js"></script>
+    <script src="./restAreas.js"></script>
+
+    <!-- Main application logic -->
+    <script src="./app.js"></script>
+
+    <!-- Google Maps API -->
+    <!-- Replace YOUR_API_KEY with your actual Google Maps API key -->
+    <script async
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&loading=async&libraries=visualization&callback=initMap">
+    </script>
+  </body>
+</html>

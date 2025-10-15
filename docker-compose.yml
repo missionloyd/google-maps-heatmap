@@ -1,0 +1,11 @@
+services:
+  heatmap-app:
+    container_name: gist5300-hw6-heatmap
+    restart: always
+    build: .
+    ports:
+      - "${PORT:-8000}:80"
+    environment:
+      - GOOGLE_MAPS_API_KEY=${GOOGLE_MAPS_API_KEY}
+    volumes:
+      - ./app:/usr/share/nginx/html

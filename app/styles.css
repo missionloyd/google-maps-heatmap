@@ -1,0 +1,47 @@
+#map {
+  height: 100%;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "sans-serif";
+}
+
+#floating-panel {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  background-color: #fff;
+  padding: 10px 15px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  text-align: center;
+  font-family: "Roboto", "sans-serif";
+  line-height: 30px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+#floating-panel button {
+  margin: 0 5px;
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+#floating-panel button:hover {
+  background-color: #45a049;
+}
+
+#floating-panel button:active {
+  background-color: #3d8b40;
+}
